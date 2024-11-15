@@ -146,11 +146,11 @@ text-gray-800">
                             var fillColor;
                             if (produksiPadi === null || produksiPadi === undefined) {
                                 fillColor = 'gray'; // Warna default jika data tidak tersedia
-                            } else if (produksiPadi >= 0 && produksiPadi <= 80000) {
+                            } else if (produksiPadi >= 0 && produksiPadi <= 146000) {
                                 fillColor = 'red'; // Warna untuk kategori "Rendah"
-                            } else if (produksiPadi > 80000 && produksiPadi <= 160000) {
+                            } else if (produksiPadi > 146000 && produksiPadi <= 292000) {
                                 fillColor = 'yellow'; // Warna untuk kategori "Normal"
-                            } else if (produksiPadi > 160000) {
+                            } else if (produksiPadi > 292000) {
                                 fillColor = 'green'; // Warna untuk kategori "Tinggi"
                             }
 

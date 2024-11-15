@@ -10,8 +10,8 @@ $search = isset($_GET['search']) ? $_GET['search'] : '';
 
 // Modifikasi query untuk menambahkan klausa pencarian jika ada input
 $query = "SELECT produksi_padi.*, kecamatan.nama_kecamatan
-FROM produksi_padi
-JOIN kecamatan ON produksi_padi.kode_kecamatan = kecamatan.id ORDER BY produksi_padi.id DESC";
+          FROM produksi_padi
+          JOIN kecamatan ON produksi_padi.kode_kecamatan = kecamatan.id";
 
 if ($search) {
     $query .= " WHERE kecamatan.nama_kecamatan ILIKE '%$search%' 
@@ -21,6 +21,10 @@ if ($search) {
                 OR produksi_padi.produktivitas::text ILIKE '%$search%'
                 OR produksi_padi.produksi_padi::text ILIKE '%$search%'";
 }
+
+// Tambahkan ORDER BY setelah semua kondisi WHERE (atau jika tidak ada WHERE)
+$query .= " ORDER BY produksi_padi.id DESC";
+
 
 $result = pg_query($conn, $query);
 

@@ -2,7 +2,7 @@
 // Menyimpan data koneksi ke variabel
 $host = "localhost";
 $port = "5432";
-$dbname = "ela_sig";
+$dbname = "sig_padi";
 $user = "postgres";
 $password = "said12202474";
 
@@ -11,8 +11,6 @@ $conn_string = "host=$host port=$port dbname=$dbname user=$user password=$passwo
 
 // Membuat koneksi dengan PostgreSQL
 $conn = pg_connect($conn_string);
-
-// Mengecek koneksi
 if (!$conn) {
   die("Koneksi gagal: " . pg_last_error());
 }
