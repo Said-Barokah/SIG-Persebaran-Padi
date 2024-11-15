@@ -40,7 +40,9 @@ while ($row = pg_fetch_assoc($result)) {
 $data_produksi_json = json_encode($data_produksi);
 
 // Query untuk mengambil data kecamatan (opsional jika Anda perlu data kecamatan)
-$tahun = isset($_GET['tahun']) ? $_GET['tahun'] : date('Y'); // Ambil tahun dari GET atau tahun sekarang sebagai default
+// Ambil nilai tahun dari GET atau gunakan tahun saat ini jika kosong
+$tahun = isset($_GET['tahun']) && is_numeric($_GET['tahun']) ? (int)$_GET['tahun'] : (int)date('Y');
+// Ambil tahun dari GET atau tahun sekarang sebagai default
 $jenis_padi = isset($_GET['jenis_padi']) ? $_GET['jenis_padi'] : 'Padi Sawah';
 $search = isset($_GET['search']) ? $_GET['search'] : ''; // Get search parameter
 

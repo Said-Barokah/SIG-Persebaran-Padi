@@ -58,6 +58,7 @@ text-gray-800">
                             <select name="jenis_padi" id="jenis" class="rounded-md px-3 py-3 text-white font-semibold bg-sky-500" onchange="this.form.submit()">
                                 <option value="Padi Ladang" <?php if (isset($_GET['jenis_padi']) && $_GET['jenis_padi'] == 'Padi Ladang') echo 'selected'; ?>>Padi Ladang</option>
                                 <option value="Padi Sawah" <?php if (isset($_GET['jenis_padi']) && $_GET['jenis_padi'] == 'Padi Sawah') echo 'selected'; ?>>Padi Sawah</option>
+                                <option value="Padi" <?php if (isset($_GET['jenis_padi']) && $_GET['jenis_padi'] == 'Padi') echo 'selected'; ?>>Padi</option>
                             </select>
                         </div>
                         <div>
