@@ -1,0 +1,13 @@
+/* Import Tailwind CSS dari node_modules */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Gaya khusus Anda */
+.login-container {
+  background: #fff;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
