@@ -100,6 +100,24 @@ text-gray-800">
                         ?>
                     </p>
                 </div>
+                <div class="flex space-x-4 py-3 ">
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-[10px] text-gray-400">Tidak ada</p>
+                            <span class="w-3 h-3 bg-gray-600"></span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-[10px] text-gray-400">Rendah</p>
+                            <span class="w-3 h-3 bg-red-600"></span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-[10px] text-gray-400">Normal</p>
+                            <span class="w-3 h-3 bg-yellow-600"></span>
+                        </div>
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-[10px] text-gray-400">TInggi</p>
+                            <span class="w-3 h-3 bg-green-600"></span>
+                        </div>
+                </div>
                 <div class="w-100 md:w-[800px]" id="map" style="height: 550px;"></div>
                 <div id="custom-popup">
                     <div id="popup-content" class="text-center"></div>
